@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f9;
+}
+
+.header{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.uruns{
+    margin-top: 50px;
+}
+.uruns h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    margin-left:100px;
+    margin-bottom: 20px;
+}
+
+.card{
+    width: 350px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.card img{
+    width: 250px;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.btn1{
+    outline: none;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: rgb(13, 190, 13);
+    border: 1px solid rgb(1, 31, 1);
+    color: #f4f4f9;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.btn2{
+    outline: none;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: red;
+    border: 1px solid rgb(82, 2, 2);
+    color: #f4f4f9;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.btn1:hover{
+    border: 1px solid white;
+    color: rgb(13, 190, 13);
+    background-color: #f4f4f9;
+    transition: 0.3s ease-in;
+}
+
+.btn2:hover{
+    border: 1px solid white;
+    color: red;
+    background-color: #f4f4f9;
+    transition: 0.3s ease-in;
+}
