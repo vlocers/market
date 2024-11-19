@@ -14,7 +14,7 @@ let urunler = [
   { name: "Cips", price: 50, img: "cips.jpg", id: 6 },
 ];
 
-// Sepeti başlat ve kontrol et
+
 let sepet = JSON.parse(localStorage.getItem("basket")) || [];
 if (!Array.isArray(sepet)) {
   sepet = [];
@@ -22,7 +22,7 @@ if (!Array.isArray(sepet)) {
 }
 guncelSepet();
 
-// Ürünleri sayfaya ekleme
+
 urunler.forEach((urun) => {
   const div = document.createElement("div");
   div.className = "card";
@@ -68,31 +68,31 @@ urunler.forEach((urun) => {
 
   cards.appendChild(div);
 
-  // Ürün Ekleme
+  
   buton1.addEventListener("click", (e) => {
     const urunid = e.currentTarget.getAttribute("data-id");
     const urun = urunler.find((u) => u.id == urunid);
     const mevcutUrun = sepet.find((u) => u.id == urunid);
 
     if (mevcutUrun) {
-      mevcutUrun.quantity += 1; // Miktarı artır
+      mevcutUrun.quantity += 1; 
     } else {
-      sepet.push({ ...urun, quantity: 1 }); // Yeni ürün ekle
+      sepet.push({ ...urun, quantity: 1 }); 
     }
     addToLS();
     guncelSepet();
   });
 
-  // Ürün Çıkarma
+ 
   buton2.addEventListener("click", (e) => {
     const urunid = parseInt(e.currentTarget.getAttribute("data-id"));
     const urunIndex = sepet.findIndex((u) => u.id === urunid);
 
     if (urunIndex !== -1) {
       if (sepet[urunIndex].quantity > 1) {
-        sepet[urunIndex].quantity -= 1; // Miktarı azalt
+        sepet[urunIndex].quantity -= 1; 
       } else {
-        sepet.splice(urunIndex, 1); // Sepetten çıkar
+        sepet.splice(urunIndex, 1); 
       }
       addToLS();
       guncelSepet();
@@ -102,18 +102,18 @@ urunler.forEach((urun) => {
   });
 });
 
-// Güncel Sepeti Gösterme
+
 function guncelSepet() {
   let total = sepet.reduce((acc, item) => acc + item.price * item.quantity, 0);
   fiyat.innerHTML = `<i class="fa-solid fa-bag-shopping"></i> Sepetim: ${total} TL`;
 }
 
-// Sepeti LocalStorage'a Kaydetme
+
 function addToLS() {
   localStorage.setItem("basket", JSON.stringify(sepet));
 }
 
-// Sepet Detaylarını Gösterme
+
 fiyat.addEventListener("click", () => {
   const pop = JSON.parse(localStorage.getItem("basket"));
   detay.style.display = "block"
