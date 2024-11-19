@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apo Market</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+
     <div class="header">
         <h2>Alışveriş Listesi</h2>
-        <p class="fiyat"><i class="fa-solid fa-bag-shopping"></i> Sepetim : 0 TL</p>
+        <p class="fiyat" style="cursor: pointer;"><i class="fa-solid fa-bag-shopping"></i> Sepetim : 0 TL</p>
     </div>
 
     <div class="uruns">
         <h1>ÜRÜNLER</h1>
         <div class="cards">
-            
+
         </div>
-       
+
+    </div>
+
+    <div id="overlay"></div>
+    <div class="popup">
+        <div class="popheader">
+            <h3><i class="fa-solid fa-basket-shopping"></i> SEPET DETAYI</h3>
+            <button id="clsbtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="description">
+
+        </div>
+
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
